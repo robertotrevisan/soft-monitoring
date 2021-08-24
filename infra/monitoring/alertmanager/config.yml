@@ -4,13 +4,12 @@ route:
   repeat_interval: 30s
   group_wait: 30s
   routes:
-  - receiver: 'slack'
-    match:
-    severity: warning
-  - receiver: 'prometheus-msteams'
-    match:
-    severity: critical
-
+    - match_re:
+        severity: "warning"
+        receiver: 'slack'
+    - match_re:
+          severity: "critical"
+          receiver: 'prometheus-msteams'
 receivers:
   - name: 'slack'
     slack_configs:
