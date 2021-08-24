@@ -10,6 +10,7 @@ route:
     - match_re:
           severity: "critical"
           receiver: 'prometheus-msteams'
+    - receiver: 'slack'
 receivers:
   - name: 'slack'
     slack_configs:
