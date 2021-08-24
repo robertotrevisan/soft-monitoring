@@ -88,7 +88,7 @@ services:
     image: nginx/nginx-prometheus-exporter:0.9.0
     container_name: nginxexporter
     command:
-      - '-nginx.scrape-uri=http://${IP_SERVER}/nginx_status'
+      - '-nginx.scrape-uri=http://$IP_SERVER/nginx_status'
     #restart: unless-stopped
     #ports: 
     #  - 9113:9113
@@ -114,8 +114,8 @@ services:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
     environment:
-      - GF_SECURITY_ADMIN_USER=${ADMIN_USER}
-      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - GF_SECURITY_ADMIN_USER=$ADMIN_USER
+      - GF_SECURITY_ADMIN_PASSWORD=$ADMIN_PASSWORD
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_INSTALL_PLUGINS=grafana-piechart-panel
     restart: unless-stopped
