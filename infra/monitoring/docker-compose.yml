@@ -85,7 +85,7 @@ services:
       - soft-proxy
 
   nginxexporter:
-    image: nginx-prometheus-exporter
+    image: nginx/nginx-prometheus-exporter:0.9.0
     command:
       - '-nginx.scrape-uri=http://${IP_SERVER}/nginx_status'
     restart: unless-stopped
