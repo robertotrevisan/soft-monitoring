@@ -86,7 +86,7 @@ services:
 
   nginxexporter:
     image: nginx/nginx-prometheus-exporter:0.9.0
-     container_name: prometheus
+    container_name: prometheus
     command:
       - '-nginx.scrape-uri=http://${IP_SERVER}/nginx_status'
     #restart: unless-stopped
