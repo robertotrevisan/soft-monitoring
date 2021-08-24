@@ -14,6 +14,11 @@ route:
     match_re:
       service: activemq
 
+  - receiver: 'prometheus-msteams'
+    group_wait: 30s
+    match_re:
+      service: activepm
+
 receivers:
   - name: 'default-receiver'
     email_configs:
