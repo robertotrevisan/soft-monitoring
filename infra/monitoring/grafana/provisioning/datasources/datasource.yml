@@ -9,3 +9,13 @@ datasources:
     basicAuth: false
     isDefault: true
     editable: true
+
+  - name: gdev-postgres
+    type: postgres
+    url: localhost:5432
+    database: liberum
+    user: postgres
+    secureJsonData:
+      password: postgres
+    jsonData:
+      sslmode: "disable"
