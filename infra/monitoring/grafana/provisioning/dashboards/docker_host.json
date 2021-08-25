@@ -1,7 +1,7 @@
 {
   "id": null,
-  "title": "Docker Host",
-  "description": "Docker host metrics",
+  "title": "Ambiente Servidor",
+  "description": "Metricas do Servidor Host",
   "tags": [
     "system"
   ],
