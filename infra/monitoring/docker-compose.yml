@@ -121,6 +121,7 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=$ADMIN_USER
       - GF_SECURITY_ADMIN_PASSWORD=$ADMIN_PASSWORD
+      - GF_SERVER_ROOT_URL=‘%(protocol)s://liberum.local.test/grafana’
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_INSTALL_PLUGINS=grafana-piechart-panel
     restart: unless-stopped
