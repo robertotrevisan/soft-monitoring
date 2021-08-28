@@ -93,7 +93,7 @@ services:
     #  - SCRAPE_URI=http://$IP_SERVER/nginx_status
     command:
       - -nginx.scrape-uri
-      - http://$IP_SERVER/nginx_status
+      - $IP_SERVER_STATUS
     #restart: unless-stopped
     #ports: 
     #  - 9113:9113
