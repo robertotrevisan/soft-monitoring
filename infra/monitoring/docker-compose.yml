@@ -77,7 +77,7 @@ services:
     - DATA_SOURCE_NAME=postgresql://postgres:postgres@192.168.1.48:5432/postgres?sslmode=disable
     - PG_EXPORTER_DISABLE_DEFAULT_METRICS=true
     - PG_EXPORTER_DISABLE_SETTINGS_METRICS=false
-    - PG_EXPORTER_EXTEND_QUERY_PATH=queries.yaml
+    #- PG_EXPORTER_EXTEND_QUERY_PATH=queries.yaml
     ports: 
       - 9187:9187
     networks:
